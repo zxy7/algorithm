@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script src="big.js"></script>
+    <script>
+
+//Q11
+var arr=[1,1];
+var allnum=0;
+function fbnq(arr){
+	var lg=arr.length;
+	arr[lg]=new Big(arr[lg-1]).plus(new Big(arr[lg-2]));
+	if (allnum < 11) {
+		if(isint(arr[lg])== arr[lg]){
+			allnum++;
+		}
+		fbnq(arr)
+	}
+}
+fbnq(arr)
+//console.log(arr)
+function isint(num){
+	var numarr= num.toString().split('');
+	var sum=0;
+	for(var i=0;i<numarr.length;i++){
+		sum+=parseInt(numarr[i])
+	}
+	if(num.mod(sum)==0){
+		console.log(num)
+		return num;
+	}else{
+		return false;
+	}
+}
+/*	
+//以下方法num数值溢出，数值小于9007199254740992时有效
+var arr = [1, 1];
+	var allnum = 0;
+	function fbnq(arr) {
+		var lg = arr.length;
+		arr[lg] = arr[lg - 1]+arr[lg - 2]);
+		if (allnum < 11) {
+			if (isint(arr[lg]) == arr[lg]) {
+				allnum++;
+				console.log(arr[lg])
+			}
+			fbnq(arr)
+		}
+	}
+	fbnq(arr)
+	console.log(arr)
+	function isint(num) {
+		var numarr = num.toString().split('');
+		var sum = 0;
+		for (var i = 0; i < numarr.length; i++) {
+			sum += parseInt(numarr[i])
+		}
+		if (num % sum == 0) {
+			return num;
+		} else {
+			return false;
+		}
+	}*/
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
