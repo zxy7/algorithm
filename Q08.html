@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script>
+	//Q08
+	var arr=[[[0,0]]];
+	tobe(arr)
+	function tobe(arr){
+			var  alength=arr.length;
+		for(var i=0;i<alength;i++){
+			var lg=arr[i].length;
+			var testarr1=arr[i].slice(0);
+			var testarr2=arr[i].slice(0);
+			var testarr3=arr[i].slice(0);
+			var testarr4=arr[i].slice(0);
+			var x=arr[i][arr[i].length-1][0];
+			var y=arr[i][arr[i].length-1][1];
+			if(!isinarray([x,y+1],arr[i])){
+				testarr1.push([x,y+1]);
+				arr.push(testarr1);
+			}
+			if ( !isinarray([x,y-1],testarr2)){
+				testarr2[lg]=[x,y-1];arr.push(testarr2);
+			}
+			if( !isinarray([x+1,y],testarr3)){
+				testarr3[lg]=[x+1,y];arr.push(testarr3);
+			}
+			if( !isinarray([x-1,y],testarr4)){
+				testarr4[lg]=[x-1,y];arr.push(testarr4);
+			}
+		}
+		
+		for(var i=0;i<alength;i++){
+			arr.shift()
+		}
+		console.log(arr)
+		if(arr[0].length!=13){
+			tobe(arr)
+		}else(alert(arr.length))
+
+	}
+	function isinarray(a,arr){
+		for (var i = 0; i <arr.length; i++) {
+			if (arr[i].toString() ==a.toString() ){
+				return true;
+			}
+		}
+		return false;
+	}
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
