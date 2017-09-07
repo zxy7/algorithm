@@ -1,2 +1,5 @@
-# algorithm
-my answer
+# 程序员的算法趣题
+js详解
+
+##Q06
+![](/img/Q06.jpg)
