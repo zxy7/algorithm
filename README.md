@@ -2,7 +2,7 @@
 javascript详解
 
 ##[Q06考拉兹猜想](https://github.com/zxy7/algorithm/blob/master/Q06.html)
-![](/img/Q06.jpg)
+![](/img/Q06.png)
 
 ```javascript
     var arr=[];
@@ -13,7 +13,7 @@ javascript详解
             s=s%2==0?s/2:s*3+1; 
             if(s==i){arr.push(s);}
         }
-            i+=2;
+        i+=2;
     }
     alert(arr.length)
 ```
