@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script src="big.js"></script>
+    <script>
+
+//Q12
+	var n=2;
+	// sqrt(n);//包含整数
+	sqrt2(n);//不包含整数
+	function sqrt(n){
+		var m=Math.sqrt(n)*10000000000;
+		var arr= m.toString().substr(0, 10).split('')
+		//console.log(arr) 
+		if(unique(arr)){
+			alert(n)  //1362
+		}else{
+			n++;
+			sqrt(n);
+		}
+	}
+	function unique(a) {
+		var res = a.filter(function (item, index, array) {
+			return array.indexOf(item) === index;
+		});
+		return res.length==a.length?true:false;
+	}
+    function sqrt2(n){
+		var m = Math.sqrt(n);
+		var arr = m.toString().split('.')[1];
+		if(arr){
+			arr = arr.substr(0, 10).split('');
+			// console.log(arr)
+			if (unique(arr)) {
+				alert(n)   //143
+			} else {
+				n++;
+				sqrt2(n);
+			}
+		}else{
+			n++;
+			sqrt2(n);
+		}
+		
+	}
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
