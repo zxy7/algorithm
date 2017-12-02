@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+<script>
+
+//Q08
+//死循环
+var n=0;
+var arr1=[[0,0]];
+add(0,0,arr1)
+function add(a,b,arr){
+	var x=0,y=0;
+	for(var i=0;i<4;i++){
+		if(i==0){
+			x=arr[arr.length-1][0];
+			y=arr[arr.length-1][1]+1;
+			console.log(x,y+"----"+i)
+			!isinarray([x,y],arr)?arr.push([x,y]):null;
+			if(arr.length<3){
+					add(x,y,arr)
+			}else if(arr.length==3){
+					n++;
+					console.log(n,arr.toString())
+			}
+		}else if(i==1){
+			x=arr[arr.length-1][0];
+			y=arr[arr.length-1][1]-1;
+			console.log(x,y+"----"+i)
+			!isinarray([x,y],arr)?arr.push([x,y]):null;
+			if(arr.length<3){
+					add(x,y,arr)
+			}else if(arr.length==3){
+					n++;
+					console.log(n,arr.toString())
+			}				
+		}else if(i==2){
+			x=arr[arr.length-1][0]+1;
+			y=arr[arr.length-1][1];
+			console.log(x,y+"----"+i)
+			!isinarray([x,y],arr)?arr.push([x,y]):null;
+			if(arr.length<3){
+					add(x,y,arr)
+			}else if(arr.length==3){
+					n++;
+					console.log(n,arr.toString())
+			}				
+		}else if(i==3){
+			x=arr[arr.length-1][0]-1;
+	        y=arr[arr.length-1][1];
+			console.log(x,y+"----"+i)
+			!isinarray([x,y],arr)?arr.push([x,y]):null;
+			if(arr.length<3){
+					add(x,y,arr)
+			}else if(arr.length==3){
+					n++;
+					console.log(n,arr.toString())
+			}			
+		}
+	}
+		
+
+}
+function isinarray(a,arr){
+    for (var i = 0; i <arr.length; i++) {
+    	if (arr[i].toString() ==a.toString() ){
+    		return true;
+    	}
+    }
+    return false;
+}
+
+
+	
+
+</script>
+</head>
+<body>
+<p>如果您点击我，我会消失。</p>
+</body>
+</html>

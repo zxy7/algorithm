@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script>
+
+//Q17
+	var n=1;
+	for (var i = 1; i <=15; i++) {
+		n+=	factorial(31-i)/(factorial(i)*factorial(31-2*i));
+		//   Ci/31-i阶乘
+	}
+	alert(n);//2178309
+	function factorial(a){
+		if(a==1){
+			return a;
+		}
+		return a*factorial(a-1)
+	}
+
+
+    </script>
+</head> 
+
+<body>
+</body>
+
+</html>

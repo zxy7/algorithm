@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+<script>
+/*
+//	Q06
+var arr=[];
+var i=2;
+for(;i<10000;){
+var s=3*i+1;while( s!=1){ s=s%2==0?s/2:s*3+1; if(s==i){arr.push(s);}}
+i+=2;
+}
+alert(arr.length)
+
+
+//Q07
+var y=1964;
+var m=10;
+var d=10;
+for(;y<=2020;y++){
+	for(m=0;m<=12;m++){ 
+		for(d=0;d<=31;d++){ 
+			var n=y.toString()+(m.toString().length<2?'0':'')+m.toString()+(d.toString().length<2?'0':'')+d.toString();
+			if(parseInt(parseInt(n).toString(2).split("").reverse().join(""),2)==n){
+			 alert(n);}   
+			} 
+		}
+	}
+
+
+
+//Q08
+var arr=[[[0,0]]];
+tobe(arr)
+function tobe(arr){
+		var  alength=arr.length;
+	for(var i=0;i<alength;i++){
+		var lg=arr[i].length;
+		var testarr1=arr[i].slice(0);
+		var testarr2=arr[i].slice(0);
+		var testarr3=arr[i].slice(0);
+		var testarr4=arr[i].slice(0);
+		var x=arr[i][arr[i].length-1][0];
+		var y=arr[i][arr[i].length-1][1];
+		if(!isinarray([x,y+1],arr[i])){
+			testarr1.push([x,y+1]);
+			arr.push(testarr1);
+		}
+		if ( !isinarray([x,y-1],testarr2)){
+            testarr2[lg]=[x,y-1];arr.push(testarr2);
+		}
+		if( !isinarray([x+1,y],testarr3)){
+			testarr3[lg]=[x+1,y];arr.push(testarr3);
+		}
+		if( !isinarray([x-1,y],testarr4)){
+			testarr4[lg]=[x-1,y];arr.push(testarr4);
+		}
+	}
+	
+	for(var i=0;i<alength;i++){
+		arr.shift()
+	}
+	console.log(arr)
+	if(arr[0].length!=13){
+		tobe(arr)
+	}else(alert(arr.length))
+
+}
+function isinarray(a,arr){
+    for (var i = 0; i <arr.length; i++) {
+    	if (arr[i].toString() ==a.toString() ){
+    		return true;
+    	}
+    }
+    return false;
+}
+
+//Q10
+var european = [0, 32, 15, 19, 4, 21, 2, 25, 17, 34, 6, 27, 13, 36,
+            11, 30, 8, 23, 10, 5, 24, 16, 33, 1, 20, 14, 31, 9,
+            22, 18, 29, 7, 28, 12, 35, 3, 26,0, 32, 15, 19, 4, 21, 2, 25, 17, 34, 6, 27, 13, 36,
+            11, 30, 8, 23, 10, 5, 24, 16, 33, 1, 20, 14, 31, 9,
+            22, 18, 29, 7, 28, 12, 35, 3, 26]
+var american = [0, 28, 9, 26, 30, 11, 7, 20, 32, 17, 5, 22, 34, 15,
+            3, 24, 36, 13, 1, 00, 27, 10, 25, 29, 12, 8, 19, 31,
+            18, 6, 21, 33, 16, 4, 23, 35, 14, 2,0, 28, 9, 26, 30, 11, 7, 20, 32, 17, 5, 22, 34, 15,
+            3, 24, 36, 13, 1, 00, 27, 10, 25, 29, 12, 8, 19, 31,
+            18, 6, 21, 33, 16, 4, 23, 35, 14, 2]
+         
+var num=0;
+for(var n=2;n<37;n++){
+	var max1=0;
+	var max2=0;
+	for(var i=0;i<37;i++){
+	    var sum1=0;
+	    var sum2=0;
+		for(var j=0;j<n;j++){
+	          sum1+=european[i+j];
+	          sum2+=american[i+j];
+		}
+		if(sum1>max1){max1=sum1}
+		if(sum2>max2){max2=sum2}
+	}    
+	if(max1<max2){
+		num++;
+	}
+ }
+console.log(num)
+
+*/
+
+
+</script>
+</head>
+<body>
+<p>如果您点击我，我会消失。</p>
+</body>
+</html>
