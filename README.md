@@ -1,7 +1,7 @@
 # 程序员的算法趣题  
 javascript详解
 
-##[Q06考拉兹猜想](https://github.com/zxy7/algorithm/blob/master/Q06.html)
+## [Q06考拉兹猜想](https://github.com/zxy7/algorithm/blob/master/Q06.html)
 ![](/img/Q06.png)
 
 ```javascript
